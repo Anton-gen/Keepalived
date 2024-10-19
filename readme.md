@@ -41,7 +41,7 @@ https://github.com/Anton-gen/Keepalived/blob/main/hsrp_advanced.pkt
                    check_script
                 }
 
- }
+ 
 
 ***
 ![1](2.jpg)
