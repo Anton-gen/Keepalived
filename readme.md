@@ -18,11 +18,9 @@ https://github.com/Anton-gen/Keepalived/blob/main/hsrp_advanced.pkt
 ## Config main keepalived.conf
 ![1](3.jpg)
  
-
 ***
 ![1](2.jpg)
 
-![1](4.jpg)
 ## Config script check_nginx.sh
 #!/bin/bash
 if [[ $(netstat -tuln | grep LISTEN | grep :80) ]] && [[ -f /var/www/html/index.nginx-debian.html ]]; then
@@ -32,3 +30,5 @@ else
 fi
 
 ***
+![1](4.jpg)
+![1](5.jpg)
