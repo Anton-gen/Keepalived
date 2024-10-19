@@ -21,10 +21,12 @@ global_defs {
     script_user root
     enable_script_security
 }
+
 vrrp_script check_script {
       script "/home/vm1/check_nginx.sh"
       interval 3
 }
+
 vrrp_instance VI_1 {
         state MASTER
         interface ens33
@@ -34,9 +36,11 @@ vrrp_instance VI_1 {
         virtual_ipaddress {
               192.168.64.130/24
         }
+
         track_script {
                    check_script
                 }
+
 }
 
 ***
