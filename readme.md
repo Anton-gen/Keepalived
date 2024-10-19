@@ -17,22 +17,23 @@ https://github.com/Anton-gen/Keepalived/blob/main/hsrp_advanced.pkt
 ***
 ## Config main keepalived.conf
 
- global_defs {
+global_defs {
     script_user root
     enable_script_security
  }
 
- vrrp_script check_script {
+vrrp_script check_script {
       script "/home/vm1/check_nginx.sh"
       interval 3
  }
 
- vrrp_instance VI_1 {
+vrrp_instance VI_1 {
         state MASTER
         interface ens33
         virtual_router_id 130
         priority 255
         advert_int 1
+        
         virtual_ipaddress {
               192.168.64.130/24
         }
@@ -40,7 +41,7 @@ https://github.com/Anton-gen/Keepalived/blob/main/hsrp_advanced.pkt
         track_script {
                    check_script
                 }
-
+}
  
 
 ***
